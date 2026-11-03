@@ -45,13 +45,13 @@ Si quieres utilizar este proyecto como plantilla, sigue estos pasos:
 **1. Clona el repositorio**
 
 ```bash
-git clone URL_DE_TU_REPOSITORIO
+git clone https://github.com/Fernandoxxi/un-lugar-para-nosotros.git
 ```
 
 **2. Entra en la carpeta**
 
 ```bash
-cd NOMBRE_DEL_PROYECTO
+cd un-lugar-para-nosotros
 ```
 
 **3. Instala las dependencias**
