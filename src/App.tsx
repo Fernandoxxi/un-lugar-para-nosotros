@@ -70,6 +70,16 @@ export default function App() {
     setDownloading(true);
 
     try {
+      const images = Array.from(
+        memoryCardRef.current.querySelectorAll<HTMLImageElement>("img")
+      );
+
+      await Promise.all(
+        images.map((image) =>
+          image.decode().catch(() => undefined)
+        )
+      );
+
       const canvas = await html2canvas(memoryCardRef.current, {
         backgroundColor: "#21162b",
         scale: 2,
@@ -436,6 +446,13 @@ export default function App() {
                 className="memory-souvenir"
                 ref={memoryCardRef}
               >
+                <div className="souvenir-collage">
+                  <img src="/images/recuerdo-1.jpg" alt="" />
+                  <img src="/images/recuerdo-2.jpg" alt="" />
+                  <img src="/images/recuerdo-3.jpg" alt="" />
+                  <img src="/images/recuerdo-4.jpg" alt="" />
+                </div>
+
                 <span className="souvenir-star">✧</span>
 
                 <p className="souvenir-label">
@@ -447,7 +464,7 @@ export default function App() {
                 <div className="souvenir-heart">♡</div>
 
                 <p className="souvenir-names">
-                  MariCELI <span>&</span> Fernando
+                  Mariceli <span>&</span> Fernando
                 </p>
 
                 <div className="souvenir-divider" />

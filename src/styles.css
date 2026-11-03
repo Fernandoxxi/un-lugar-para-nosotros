@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 
 :root {
@@ -699,11 +700,42 @@ footer span {
   overflow: hidden;
   border: 1px solid #f3b8c955;
   border-radius: 24px;
-  background:
-    radial-gradient(circle at 10% 10%, #bd69952b, transparent 40%),
-    radial-gradient(circle at 90% 90%, #8065c82b, transparent 45%),
-    #21162b;
+  background: #21162b;
   box-shadow: 0 20px 65px #0006;
+}
+
+/* NUEVO FONDO CON LAS CUATRO FOTOGRAFÍAS */
+.souvenir-collage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.souvenir-collage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  background: #160f24;
+}
+
+.souvenir-collage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 15, 36, 0.62);
+}
+
+.memory-souvenir > :not(.souvenir-collage) {
+  position: relative;
+  z-index: 2;
 }
 
 .memory-souvenir::before,
@@ -713,6 +745,7 @@ footer span {
   color: #f3d9a3;
   font-size: 1.5rem;
   opacity: 0.7;
+  z-index: 3;
 }
 
 .memory-souvenir::before {
