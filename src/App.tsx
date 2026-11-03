@@ -447,7 +447,7 @@ export default function App() {
                 <div className="souvenir-heart">♡</div>
 
                 <p className="souvenir-names">
-                  Mari <span>&</span> Tú
+                  MariCELI <span>&</span> Fernando
                 </p>
 
                 <div className="souvenir-divider" />
