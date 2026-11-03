@@ -653,3 +653,202 @@ footer span {
   }
 }
 
+/* ========================================
+   PANTALLA FINAL: NUESTRO RECUERDO
+======================================== */
+
+.memory-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-y: auto;
+  display: grid;
+  place-items: center;
+  padding: 35px 18px;
+  background:
+    radial-gradient(ellipse at top, #55334f 0%, transparent 55%),
+    #160f24;
+}
+
+.memory-content {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  margin: auto;
+}
+
+.memory-content h2 {
+  font-size: clamp(2.2rem, 8vw, 3.5rem);
+  margin: 15px 0;
+}
+
+.memory-content > p {
+  max-width: 390px;
+  margin: 0 auto 25px;
+  font-size: 0.9rem;
+}
+
+.memory-souvenir {
+  width: 100%;
+  max-width: 420px;
+  margin: 28px auto;
+  padding: 38px 25px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f3b8c955;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 10% 10%, #bd69952b, transparent 40%),
+    radial-gradient(circle at 90% 90%, #8065c82b, transparent 45%),
+    #21162b;
+  box-shadow: 0 20px 65px #0006;
+}
+
+.memory-souvenir::before,
+.memory-souvenir::after {
+  content: "✦";
+  position: absolute;
+  color: #f3d9a3;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.memory-souvenir::before {
+  top: 20px;
+  left: 22px;
+}
+
+.memory-souvenir::after {
+  right: 22px;
+  bottom: 20px;
+}
+
+.souvenir-label {
+  display: block;
+  color: #f3d9a3;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.souvenir-title {
+  font-family: 'Playfair Display', serif;
+  color: #fff4e9;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.souvenir-subtitle {
+  color: #f3b8c9;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  margin: 0 0 25px;
+}
+
+.souvenir-names {
+  color: #fff4e9;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  margin: 20px 0;
+}
+
+.souvenir-message {
+  color: #c9b9cb;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  max-width: 300px;
+  margin: 0 auto 25px;
+}
+
+.souvenir-date {
+  display: block;
+  color: #f3d9a3;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  margin-top: 20px;
+}
+
+.souvenir-footer {
+  display: block;
+  color: #a997ad;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  margin-top: 28px;
+}
+
+.memory-description {
+  color: #a997ad;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  margin: 15px auto 25px;
+  max-width: 350px;
+}
+
+.memory-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin: 25px auto 0;
+}
+
+.memory-actions .button {
+  width: 100%;
+}
+
+.memory-close {
+  margin-top: 12px;
+  border: none;
+  background: transparent;
+  color: #b9a8bd;
+  font-size: 0.82rem;
+  padding: 12px;
+}
+
+.memory-close:hover {
+  color: #f3b8c9;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 650px) {
+  .memory-modal {
+    padding: 28px 16px;
+    align-items: start;
+  }
+
+  .memory-content {
+    padding-top: 20px;
+  }
+
+  .memory-souvenir {
+    padding: 32px 20px;
+    margin: 22px auto;
+  }
+
+  .memory-content h2 {
+    font-size: 2.3rem;
+  }
+
+  .souvenir-title {
+    font-size: 2.3rem;
+  }
+
+  .memory-actions {
+    max-width: 100%;
+  }
+}
