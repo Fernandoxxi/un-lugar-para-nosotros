@@ -359,7 +359,7 @@ export default function App() {
           </p>
 
           <h2 className="question">
-            ¿Quieres ser mi novia? <span>♡</span>
+            ¿Puedo ser tu novio? <span>♡</span>
           </h2>
 
           <div className="proposal-actions">
@@ -367,7 +367,7 @@ export default function App() {
               className="button button-primary"
               onClick={() => setAnswer(true)}
             >
-              Sí, quiero ♡
+              Sí ♡
             </button>
 
             <button
